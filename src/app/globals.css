@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+:root {
+  --font-inter: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0a0a0f;
+  color: white;
+  font-family: var(--font-inter), sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: rgb(245 158 11 / 0.3);
+  color: white;
+}
+
+/* Utilities custom */
+.text-gradient {
+  background: linear-gradient(to right, #f59e0b, #f97316, #ef4444);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.glow {
+  text-shadow: 0 0 40px rgba(245, 158, 11, 0.3);
+}
+
+.card-glass {
+  background-color: rgb(255 255 255 / 0.03);
+  backdrop-filter: blur(24px);
+  border: 1px solid rgb(255 255 255 / 0.06);
+  border-radius: 1rem;
+}
