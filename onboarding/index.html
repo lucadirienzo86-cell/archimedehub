@@ -11,37 +11,18 @@
 
 <header class="header">
   <div class="header__inner">
-    <a href="/" class="logo">
-      <div class="logo__mark">⚡</div>
-      <div class="logo__text">
-        <span class="logo__name">ARCHIMEDE<span>HUB</span></span>
-        <span class="logo__sub">by DI RIENZO SRL</span>
-      </div>
-    </a>
-    <nav class="nav">
-      <a href="/">Home</a>
-      <a href="/onboarding/" style="color:#d4af37">Onboarding</a>
-      <a href="/sop/">SOP</a>
-      <a href="/prompt-shorts/">Prompt</a>
-      <a href="#tool" class="btn btn--primary">Inizia</a>
-    </nav>
-    <button class="mobile-toggle" id="mobileBtn" aria-label="Menu">☰</button>
+    <a href="/" class="logo"><div class="logo__mark">⚡</div><div class="logo__text"><span class="logo__name">ARCHIMEDE<span>HUB</span></span><span class="logo__sub">by DI RIENZO SRL</span></div></a>
+    <nav class="nav"><a href="/">Home</a><a href="/onboarding/" style="color:#f59e0b">Onboarding</a><a href="/sop/">SOP</a><a href="/prompt-shorts/">Prompt</a><a href="#tool" class="btn btn--primary">Inizia</a></nav>
+    <button class="mobile-toggle" id="mBtn">☰</button>
   </div>
-  <div class="mobile-nav" id="mobileNav">
-    <a href="/">Home</a>
-    <a href="/onboarding/">Onboarding</a>
-    <a href="/sop/">SOP</a>
-    <a href="/prompt-shorts/">Prompt Shorts</a>
-  </div>
+  <div class="mobile-nav" id="mNav"><a href="/">Home</a><a href="/onboarding/">Onboarding</a><a href="/sop/">SOP</a><a href="/prompt-shorts/">Prompt</a></div>
 </header>
 
-<section class="tool-hero">
-  <div class="container text-center">
-    <div class="hero__badge">⚡ PIANO D'AZIONE PERSONALIZZATO</div>
-    <h1>Ricevi il tuo piano<br><span class="text-gradient">contenuti su misura</span></h1>
-    <p>Rispondi a 4 domande. Ricevi: angoli di contenuto, hook, titoli, CTA e checklist SEO — pronti per essere pubblicati.</p>
-  </div>
-</section>
+<section class="tool-hero"><div class="container text-center">
+  <div class="hero__badge" style="display:inline-flex;margin-bottom:1.5rem">⚡ PIANO D'AZIONE PERSONALIZZATO</div>
+  <h1>Ricevi il tuo piano<br><span class="text-gradient">contenuti su misura</span></h1>
+  <p>Rispondi a 4 domande. Ricevi: angoli di contenuto, hook, titoli, CTA e checklist — pronti per essere pubblicati.</p>
+</div></section>
 
 <div class="tool-wrap" id="tool">
   <div class="tool-steps">
@@ -50,120 +31,49 @@
     <div class="tool-step-btn" id="tsb2" onclick="goStep(2)">3. Canali</div>
     <div class="tool-step-btn" id="tsb3">4. Piano</div>
   </div>
-
-  <div class="card" style="padding:2.5rem">
+  <div class="card" style="padding:2rem">
     <div class="tool-pane active" id="tp0">
-      <h2>Il tuo progetto</h2>
-      <p class="subtitle">Di cosa parliamo? Serve per orientare tono, contenuti e CTA.</p>
-      <div class="form-group"><label>Nome progetto / brand *</label><input type="text" id="f_project" placeholder="Es. Guapacha, OMA Hub, il mio studio..." onchange="checkStep()"></div>
-      <div class="form-group"><label>Chi è il tuo pubblico? *</label><input type="text" id="f_target" placeholder="Es. Futuri spose, imprenditori under 40..." onchange="checkStep()"></div>
-      <div class="form-group"><label>Cosa offri / cosa vendi?</label><input type="text" id="f_offer" placeholder="Es. Corsi di danza, consulenza, SaaS..." onchange="checkStep()"></div>
+      <h2>Il tuo progetto</h2><p class="subtitle">Di cosa parliamo? Serve per orientare tono, contenuti e CTA.</p>
+      <div class="form-group"><label>Nome progetto / brand *</label><input type="text" id="f_proj" placeholder="Es. Guapacha, OMA Hub..." onchange="ck()"></div>
+      <div class="form-group"><label>Chi è il tuo pubblico? *</label><input type="text" id="f_tgt" placeholder="Es. Futuri spose, imprenditori under 40..." onchange="ck()"></div>
+      <div class="form-group"><label>Cosa offri?</label><input type="text" id="f_off" placeholder="Es. Corsi di danza, consulenza..." onchange="ck()"></div>
     </div>
     <div class="tool-pane" id="tp1">
-      <h2>Obiettivo e angolo</h2>
-      <p class="subtitle">Cosa vuoi ottenere? Quale dolore o desiderio agganci?</p>
-      <div class="form-group">
-        <label>Obiettivo principale *</label>
-        <div class="chip-grid" id="objChips">
-          <button class="chip" onclick="toggleChip(this,'obj','lead')">📩 Lead / Contatti</button>
-          <button class="chip" onclick="toggleChip(this,'obj','sell')">💰 Vendite dirette</button>
-          <button class="chip" onclick="toggleChip(this,'obj','traffic')">🔗 Traffico al sito</button>
-          <button class="chip" onclick="toggleChip(this,'obj','authority')">🏆 Autorevolezza</button>
-          <button class="chip" onclick="toggleChip(this,'obj','community')">👥 Community</button>
-        </div>
-      </div>
-      <div class="form-group"><label>Quale problema/dolore agganci? *</label><textarea id="f_pain" rows="2" placeholder="Es. Non sanno comunicare il valore del prodotto..." onchange="checkStep()"></textarea></div>
+      <h2>Obiettivo e angolo</h2><p class="subtitle">Cosa vuoi ottenere? Quale dolore agganci?</p>
+      <div class="form-group"><label>Obiettivo principale *</label><div class="chip-grid"><button class="chip" onclick="selChip(this,'obj','lead')">📩 Lead</button><button class="chip" onclick="selChip(this,'obj','sell')">💰 Vendite</button><button class="chip" onclick="selChip(this,'obj','traffic')">🔗 Traffico</button><button class="chip" onclick="selChip(this,'obj','auth')">🏆 Autorevolezza</button><button class="chip" onclick="selChip(this,'obj','comm')">👥 Community</button></div></div>
+      <div class="form-group"><label>Quale problema/dolore agganci? *</label><textarea id="f_pain" rows="2" placeholder="Es. Non sanno comunicare il valore..." onchange="ck()"></textarea></div>
     </div>
     <div class="tool-pane" id="tp2">
-      <h2>Canale e CTA</h2>
-      <p class="subtitle">Dove pubblichi? Quale azione vuoi far fare al pubblico?</p>
-      <div class="form-group">
-        <label>Canali *</label>
-        <div class="chip-grid" id="chChips">
-          <button class="chip" onclick="toggleChip(this,'ch','yt')">📺 YouTube Shorts</button>
-          <button class="chip" onclick="toggleChip(this,'ch','ig')">📸 Instagram Reels</button>
-          <button class="chip" onclick="toggleChip(this,'ch','tt')">🎵 TikTok</button>
-          <button class="chip" onclick="toggleChip(this,'ch','li')">💼 LinkedIn</button>
-          <button class="chip" onclick="toggleChip(this,'ch','x')">🐦 X</button>
-        </div>
-      </div>
-      <div class="form-group"><label>CTA desiderata</label><input type="text" id="f_cta" placeholder="Es. STRATEGIA, DEMO, CHECK..." onchange="checkStep()"></div>
+      <h2>Canale e CTA</h2><p class="subtitle">Dove pubblichi? Quale azione vuoi far fare?</p>
+      <div class="form-group"><label>Canali *</label><div class="chip-grid"><button class="chip" onclick="selChip(this,'ch','yt')">📺 YouTube</button><button class="chip" onclick="selChip(this,'ch','ig')">📸 Instagram</button><button class="chip" onclick="selChip(this,'ch','tt')">🎵 TikTok</button><button class="chip" onclick="selChip(this,'ch','li')">💼 LinkedIn</button><button class="chip" onclick="selChip(this,'ch','x')">🐦 X</button></div></div>
+      <div class="form-group"><label>CTA desiderata</label><input type="text" id="f_cta" placeholder="Es. STRATEGIA, DEMO, CHECK..." onchange="ck()"></div>
     </div>
     <div class="tool-pane" id="tp3">
-      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1.5rem">
-        <div><h2 style="display:flex;align-items:center;gap:.5rem">✨ Il tuo piano d'azione</h2><p class="subtitle" id="resultSub">Piano personalizzato per il tuo progetto</p></div>
-        <button class="reset-btn" onclick="resetTool()">↺ Ricomincia</button>
-      </div>
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1.25rem"><div><h2 style="display:flex;align-items:center;gap:.5rem">✨ Il tuo piano d'azione</h2><p class="subtitle" id="rSub">Piano personalizzato</p></div><button class="reset-btn" onclick="resetT()">↺ Ricomincia</button></div>
       <div id="results"></div>
     </div>
-    <div class="form-nav" id="toolNav">
-      <button class="btn btn--ghost" id="btnBack" onclick="prevStep()" style="visibility:hidden">← Indietro</button>
-      <button class="btn btn--primary" id="btnNext" onclick="nextStep()" disabled>Avanti →</button>
-    </div>
+    <div class="form-nav" id="tNav"><button class="btn btn--ghost" id="bBack" onclick="prevS()" style="visibility:hidden">← Indietro</button><button class="btn btn--primary" id="bNext" onclick="nextS()" disabled>Avanti →</button></div>
   </div>
 </div>
 
-<footer class="footer">
-  <div class="footer__inner">
-    <div class="footer__copy"><strong>AI Classroom — ArchimedeHub</strong>Sistema operativo per contenuti brevi</div>
-    <div class="footer__links"><span>© 2026 DI RIENZO SRL</span><span>•</span><span>P.IVA IT</span></div>
-  </div>
-</footer>
+<footer class="footer"><div class="footer__inner"><div class="footer__copy"><strong>AI Classroom — ArchimedeHub</strong>Sistema operativo per contenuti brevi</div><div class="footer__links"><span>© 2026 DI RIENZO SRL</span><span>•</span><span>P.IVA IT</span></div></div></footer>
 
 <script>
-document.getElementById('mobileBtn').addEventListener('click', function(){document.getElementById('mobileNav').classList.toggle('open')});
-var curStep=0, data={project:'',target:'',offer:'',objective:'',pain:'',channels:[],cta:''};
-function checkStep(){
-  data.project=document.getElementById('f_project').value.trim();
-  data.target=document.getElementById('f_target').value.trim();
-  data.offer=document.getElementById('f_offer').value.trim();
-  data.pain=document.getElementById('f_pain').value.trim();
-  data.cta=document.getElementById('f_cta').value.trim().toUpperCase();
-  var ok=false;
-  if(curStep===0)ok=data.project&&data.target;
-  if(curStep===1)ok=data.objective&&data.pain;
-  if(curStep===2)ok=data.channels.length>0;
-  document.getElementById('btnNext').disabled=!ok;
-}
-function toggleChip(el,type,val){
-  el.classList.toggle('selected');
-  if(type==='obj'){document.querySelectorAll('#objChips .chip').forEach(function(c){c.classList.remove('selected')});el.classList.add('selected');data.objective=val;}
-  else{var i=data.channels.indexOf(val);if(i>=0)data.channels.splice(i,1);else data.channels.push(val);}
-  checkStep();
-}
-function goStep(n){if(n>curStep)return;showStep(n);}
-function showStep(n){
-  curStep=n;
-  document.querySelectorAll('.tool-pane').forEach(function(s){s.classList.remove('active')});
-  document.getElementById('tp'+n).classList.add('active');
-  document.querySelectorAll('.tool-step-btn').forEach(function(s,i){s.classList.remove('active','done');if(i<n)s.classList.add('done');if(i===n)s.classList.add('active')});
-  document.getElementById('btnBack').style.visibility=n===0?'hidden':'visible';
-  var nb=document.getElementById('btnNext');
-  if(n===2){nb.textContent='✨ Genera Piano';nb.onclick=generatePlan;}
-  else if(n===3){document.getElementById('toolNav').style.display='none';}
-  else{nb.textContent='Avanti →';nb.onclick=nextStep;}
-  checkStep();
-}
-function nextStep(){if(curStep<3)showStep(curStep+1)}
-function prevStep(){if(curStep>0)showStep(curStep-1)}
-function generatePlan(){
-  showStep(3);
-  var d=data, cta=d.cta||'PARTECIPA';
-  var objMap={lead:'lead qualificati',sell:'vendite dirette',traffic:'traffico al sito',authority:'autorevolezza',community:'community'};
-  var chMap={yt:'YouTube Shorts',ig:'Instagram Reels',tt:'TikTok',li:'LinkedIn',x:'X'};
-  var obj=objMap[d.objective]||d.objective;
-  var channels=d.channels.map(function(c){return chMap[c]}).join(', ');
-  var plan='PIANO D\'AZIONE — '+d.project.toUpperCase()+'\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\nTARGET: '+d.target+'\nOBIETTIVO: '+obj+'\nCANALE: '+channels+'\nPROBLEMA FORTE: '+d.pain+'\nCTA: '+cta+'\n\nSTRUTTURA VIDEO (30-45 sec):\n• 0-3 sec  → HOOK: Fermare lo scroll\n• 3-8 sec  → PROBLEMA: Far riconoscere il dolore\n• 8-35 sec → VALORE: Soluzione concreta\n• Finale   → CTA: '+cta+'\n\nCHECKLIST:\n☐ Hook nei primi 3 sec\n☐ Beneficio chiaro\n☐ Video verticale (9:16)\n☐ Testi leggibili\n☐ CTA coerente\n☐ Titolo specifico\n☐ Hashtag mirati';
-  var hooks='10 HOOK — '+d.project+'\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n1. "'+d.pain+' — Ecco cosa succede se non lo risolvi."\n2. "La maggior parte di '+d.target+' sbaglia questa cosa."\n3. "Se '+d.pain+', devi vedere questo."\n4. "Il consiglio che avrei voluto ricevere su '+d.project+'."\n5. "Perché '+d.target+' non ottiene risultati?"\n6. "Questo errore costa caro a '+d.target+'."\n7. "Come ho risolto '+d.pain+'."\n8. "La cosa che nessuno ti dice su '+d.project+'."\n9. "Se vuoi '+obj+', fai prima questo."\n10. "Ho visto '+d.target+' perdere tempo per questo."';
-  var titles='10 TITOLI + CTA — '+d.project+'\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n1. "L\'errore che '+d.target+' continua a ripetere"\n2. "Perché il tuo approccio a '+d.project+' non funziona"\n3. "Come risolvere '+d.pain+' in pochi passi"\n4. "Il metodo per ottenere '+obj+'"\n5. "Fai così: '+d.project+' passo dopo passo"\n6. "La tecnica che uso per '+obj+'"\n7. "'+d.project+': la strategia completa"\n8. "Il sistema che trasforma '+d.target+'"\n9. "Cosa succede quando applichi questo"\n10. "La guida essenziale su '+d.project+'"\n\nCTA:\n• "Commenta '+cta+' e ti mando i dettagli."\n• "Vuoi '+obj+'? Commenta e ti guido."\n• "Salva e commenta '+cta+' quando sei pronto."';
-  var seo='CHECKLIST SEO — '+d.project+'\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\nTITOLO:\n☐ Orientato al beneficio (non generico)\n☐ Max 45 caratteri · Title Case\n☐ Niente tutto maiuscolo\n\nCAPTION:\n☐ Breve (leggibile tutta)\n☐ Una sola CTA principale\n☐ Hashtag specifici (non #fyp, #viral)\n☐ Hashtag variati per piattaforma\n\nMINIATURA:\n☐ Frame interessante, non casuale\n☐ Testo grande e leggibile\n☐ Volto se aumenta fiducia\n\nPUBBLICAZIONE:\n☐ Orario di punta del canale\n☐ Descrizione con keyword naturali\n☐ Rispondi ai commenti nelle prime 2h';
-  var c=document.getElementById('results');
-  c.innerHTML=rBlock('Piano d\'azione',plan)+rBlock('10 Hook',hooks)+rBlock('10 Titoli + CTA',titles)+rBlock('Checklist SEO',seo);
-  document.getElementById('resultSub').textContent='Piano per "'+d.project+'" → '+d.target;
-}
-function rBlock(title,content){return'<div class="result-block"><div class="result-block__header"><h4>'+title+'</h4><button class="copy-btn" onclick="copyText(this)">Copia</button></div><pre>'+content.replace(/</g,'&lt;')+'</pre></div>'}
-function copyText(btn){var t=btn.parentElement.nextElementSibling.textContent;navigator.clipboard.writeText(t).then(function(){btn.textContent='Copiato!';btn.classList.add('copied');setTimeout(function(){btn.textContent='Copia';btn.classList.remove('copied')},2000)})}
-function resetTool(){data={project:'',target:'',offer:'',objective:'',pain:'',channels:[],cta:''};document.querySelectorAll('input,textarea').forEach(function(el){el.value=''});document.querySelectorAll('.chip.selected').forEach(function(c){c.classList.remove('selected')});document.getElementById('results').innerHTML='';document.getElementById('toolNav').style.display='flex';showStep(0)}
+document.getElementById('mBtn').addEventListener('click',function(){document.getElementById('mNav').classList.toggle('open')});
+var cs=0,d={p:'',t:'',o:'',obj:'',pain:'',ch:[],cta:''};
+function ck(){d.p=document.getElementById('f_proj').value.trim();d.t=document.getElementById('f_tgt').value.trim();d.o=document.getElementById('f_off').value.trim();d.pain=document.getElementById('f_pain').value.trim();d.cta=document.getElementById('f_cta').value.trim().toUpperCase();var ok=false;if(cs===0)ok=d.p&&d.t;if(cs===1)ok=d.obj&&d.pain;if(cs===2)ok=d.ch.length>0;document.getElementById('bNext').disabled=!ok}
+function selChip(el,type,val){el.classList.toggle('selected');if(type==='obj'){document.querySelectorAll('#tp1 .chip').forEach(function(c){c.classList.remove('selected')});el.classList.add('selected');d.obj=val}else{var i=d.ch.indexOf(val);if(i>=0)d.ch.splice(i,1);else d.ch.push(val)}ck()}
+function goStep(n){if(n>cs)return;showS(n)}
+function showS(n){cs=n;document.querySelectorAll('.tool-pane').forEach(function(s){s.classList.remove('active')});document.getElementById('tp'+n).classList.add('active');document.querySelectorAll('.tool-step-btn').forEach(function(s,i){s.classList.remove('active','done');if(i<n)s.classList.add('done');if(i===n)s.classList.add('active')});document.getElementById('bBack').style.visibility=n===0?'hidden':'visible';var nb=document.getElementById('bNext');if(n===2){nb.textContent='✨ Genera Piano';nb.onclick=genP}else if(n===3){document.getElementById('tNav').style.display='none'}else{nb.textContent='Avanti →';nb.onclick=nextS}ck()}
+function nextS(){if(cs<3)showS(cs+1)}function prevS(){if(cs>0)showS(cs-1)}
+function genP(){showS(3);var d2=d,cta=d2.cta||'PARTECIPA';var om={lead:'lead qualificati',sell:'vendite dirette',traffic:'traffico al sito',auth:'autorevolezza',comm:'community'};var cm={yt:'YouTube Shorts',ig:'Instagram Reels',tt:'TikTok',li:'LinkedIn',x:'X'};var obj=om[d2.obj]||d2.obj;var ch=d2.ch.map(function(c){return cm[c]}).join(', ');
+var plan='PIANO D\'AZIONE — '+d2.p.toUpperCase()+'\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\nTARGET: '+d2.t+'\nOBIETTIVO: '+obj+'\nCANALE: '+ch+'\nPROBLEMA: '+d2.pain+'\nCTA: '+cta+'\n\nSTRUTTURA VIDEO (30-45 sec):\n• 0-3 sec  → HOOK: Fermare lo scroll\n• 3-8 sec  → PROBLEMA: Far riconoscere il dolore\n• 8-35 sec → VALORE: Soluzione concreta\n• Finale   → CTA: '+cta+'\n\nCHECKLIST:\n☐ Hook nei primi 3 sec\n☐ Beneficio chiaro\n☐ Video verticale (9:16)\n☐ Testi leggibili\n☐ CTA coerente\n☐ Titolo specifico\n☐ Hashtag mirati';
+var hooks='10 HOOK — '+d2.p+'\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n1. "'+d2.pain+' — Ecco cosa succede se non lo risolvi."\n2. "La maggior parte di '+d2.t+' sbaglia questa cosa."\n3. "Se '+d2.pain+', devi vedere questo."\n4. "Il consiglio che avrei voluto ricevere su '+d2.p+'."\n5. "Perché '+d2.t+' non ottiene risultati?"\n6. "Questo errore costa caro a '+d2.t+'."\n7. "Come ho risolto '+d2.pain+'."\n8. "La cosa che nessuno ti dice su '+d2.p+'."\n9. "Se vuoi '+obj+', fai prima questo."\n10. "Ho visto '+d2.t+' perdere tempo per questo."';
+var titles='10 TITOLI + CTA — '+d2.p+'\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n1. "L\'errore che '+d2.t+' continua a ripetere"\n2. "Perché il tuo approccio a '+d2.p+' non funziona"\n3. "Come risolvere '+d2.pain+' in pochi passi"\n4. "Il metodo per ottenere '+obj+'"\n5. "Fai così: '+d2.p+' passo dopo passo"\n6. "'+d2.p+': la strategia completa"\n7. "Il sistema che trasforma '+d2.t+'"\n8. "Cosa succede quando applichi questo"\n9. "La guida essenziale su '+d2.p+'"\n10. "'+d2.p+' — il metodo completo"\n\nCTA:\n• "Commenta '+cta+' e ti mando i dettagli."\n• "Vuoi '+obj+'? Commenta e ti guido."\n• "Salva e commenta '+cta+' quando sei pronto."';
+var c=document.getElementById('results');c.innerHTML=rB('Piano d\'azione',plan)+rB('10 Hook',hooks)+rB('10 Titoli + CTA',titles);document.getElementById('rSub').textContent='Piano per "'+d2.p+'" → '+d2.t}
+function rB(t,content){return'<div class="result-block"><div class="result-block__header"><h4>'+t+'</h4><button class="copy-btn" onclick="copyTxt(this)">Copia</button></div><pre>'+content.replace(/</g,'&lt;')+'</pre></div>'}
+function copyTxt(btn){var t=btn.parentElement.nextElementSibling.textContent;navigator.clipboard.writeText(t).then(function(){btn.textContent='Copiato!';btn.classList.add('copied');setTimeout(function(){btn.textContent='Copia';btn.classList.remove('copied')},2000)})}
+function resetT(){d={p:'',t:'',o:'',obj:'',pain:'',ch:[],cta:''};document.querySelectorAll('input,textarea').forEach(function(el){el.value=''});document.querySelectorAll('.chip.selected').forEach(function(c){c.classList.remove('selected')});document.getElementById('results').innerHTML='';document.getElementById('tNav').style.display='flex';showS(0)}
 </script>
 </body>
 </html>
