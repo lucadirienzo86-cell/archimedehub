@@ -4,118 +4,96 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SOP Universale — AI Classroom | ArchimedeHub</title>
-<meta name="description" content="Sistema operativo per trasformare qualsiasi progetto in contenuti brevi. SOP universale: 13 sezioni operative, scheda progetto, regole editoriali, prompt riutilizzabili.">
+<meta name="description" content="Sistema operativo per trasformare qualsiasi progetto in contenuti brevi. 13 sezioni operative.">
 <link rel="stylesheet" href="/style.css">
 </head>
 <body>
 
-<!-- Header -->
 <header class="header">
-  <div class="header-inner">
+  <div class="header__inner">
     <a href="/" class="logo">
-      <div class="logo-icon">⚡</div>
-      <div class="logo-text">
-        <span class="logo-name">ARCHIMEDE<span>HUB</span></span>
-        <span class="logo-sub">by DI RIENZO SRL</span>
+      <div class="logo__mark">⚡</div>
+      <div class="logo__text">
+        <span class="logo__name">ARCHIMEDE<span>HUB</span></span>
+        <span class="logo__sub">by DI RIENZO SRL</span>
       </div>
     </a>
     <nav class="nav">
       <a href="/">Home</a>
-      <a href="/sop/" style="color:#fff">SOP</a>
-      <a href="/prompt-shorts/">Prompt Shorts</a>
-      <a href="/prompt-shorts/" class="btn btn-primary">Configura Prompt</a>
+      <a href="/onboarding/">Onboarding</a>
+      <a href="/sop/" style="color:#d4af37">SOP</a>
+      <a href="/prompt-shorts/">Prompt</a>
+      <a href="/onboarding/" class="btn btn--primary">Inizia</a>
     </nav>
     <button class="mobile-toggle" id="mobileBtn" aria-label="Menu">☰</button>
   </div>
   <div class="mobile-nav" id="mobileNav">
     <a href="/">Home</a>
+    <a href="/onboarding/">Onboarding</a>
     <a href="/sop/">SOP</a>
     <a href="/prompt-shorts/">Prompt Shorts</a>
   </div>
 </header>
 
-<!-- Hero -->
-<section class="sop-hero" style="padding-top:6rem">
-  <div class="container" style="text-align:center">
-    <p style="color:rgba(255,255,255,.3);font-size:.75rem;margin-bottom:.5rem;text-transform:uppercase;letter-spacing:.15em">SISTEMA OPERATIVO</p>
+<section class="tool-hero">
+  <div class="container text-center">
+    <p class="text-uppercase" style="color:rgba(255,255,255,.3);font-size:.7rem;margin-bottom:.5rem">SISTEMA OPERATIVO</p>
     <h1>SOP Universale</h1>
     <p>Sistema operativo per trasformare qualsiasi progetto in contenuti brevi, pubblicabili e misurabili. 13 sezioni operative.</p>
     <div class="sop-index">
-      <a href="#s1">Scopo</a>
-      <a href="#s2">Scheda Progetto</a>
-      <a href="#s3">Regole Editoriali</a>
-      <a href="#s4">Selezione Contenuto</a>
-      <a href="#s5">Creazione Short</a>
-      <a href="#s6">Titoli e CTA</a>
-      <a href="#s7">Regole Visuali</a>
-      <a href="#s8">Multi-Canale</a>
-      <a href="#s9">Report</a>
-      <a href="#s10">Checklist</a>
-      <a href="#s11">Prompt</a>
-      <a href="#s12">Esempi</a>
-      <a href="#s13">FAQ</a>
+      <a href="#s1">Scopo</a><a href="#s2">Scheda</a><a href="#s3">Regole</a><a href="#s4">Selezione</a>
+      <a href="#s5">Creazione</a><a href="#s6">Titoli</a><a href="#s7">Visuali</a><a href="#s8">Canali</a>
+      <a href="#s9">Report</a><a href="#s10">Checklist</a><a href="#s11">Prompt</a><a href="#s12">Esempi</a><a href="#s13">FAQ</a>
     </div>
   </div>
 </section>
 
-<!-- Accordion sections -->
-<div style="max-width:52rem;margin:0 auto;padding:0 1.5rem 4rem">
+<div style="max-width:42rem;margin:0 auto;padding:0 1.5rem 5rem">
 
-  <!-- S1 — Scopo -->
-  <div class="card-glass accordion-item" id="s1">
-    <button class="accordion-header" onclick="toggleSection(this)">
-      <div class="accordion-icon-box">📖</div>
-      <span class="accordion-num">Sezione 01</span>
-      <span class="accordion-title">Scopo della SOP</span>
-      <span class="accordion-arrow">▼</span>
+  <div class="card" style="margin-bottom:.75rem" id="s1">
+    <button class="accordion__header" onclick="toggleAcc(this)">
+      <div class="accordion__icon">📖</div>
+      <span class="accordion__num">01</span>
+      <span class="accordion__title">Scopo della SOP</span>
+      <span class="accordion__arrow">▼</span>
     </button>
-    <div class="accordion-body">
-      <div class="sop-content">
+    <div class="accordion__body">
+      <div class="accordion__content">
         <p>Questa SOP serve a prendere qualsiasi progetto e trasformarlo in contenuti brevi, chiari e pubblicabili. Il metodo nasce da una logica semplice: catturare attenzione, dare valore concreto, chiudere con una CTA misurabile e migliorare ogni giorno sui dati reali.</p>
         <h3>Traduzione operativa</h3>
         <p>Ogni progetto deve rispondere a tre domande:</p>
         <div style="display:flex;flex-direction:column;gap:.75rem;margin-top:1rem">
-          <div style="background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.04);border-radius:.75rem;padding:1rem;display:flex;align-items:flex-start;gap:.75rem">
-            <span style="font-size:1.25rem;font-weight:800;color:rgba(245,158,11,.3)">1</span>
-            <span style="color:rgba(255,255,255,.6)">Che problema risolve?</span>
-          </div>
-          <div style="background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.04);border-radius:.75rem;padding:1rem;display:flex;align-items:flex-start;gap:.75rem">
-            <span style="font-size:1.25rem;font-weight:800;color:rgba(245,158,11,.3)">2</span>
-            <span style="color:rgba(255,255,255,.6)">Per chi lo risolve?</span>
-          </div>
-          <div style="background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.04);border-radius:.75rem;padding:1rem;display:flex;align-items:flex-start;gap:.75rem">
-            <span style="font-size:1.25rem;font-weight:800;color:rgba(245,158,11,.3)">3</span>
-            <span style="color:rgba(255,255,255,.6)">Quale azione vogliamo far fare alla persona dopo aver visto il contenuto?</span>
-          </div>
+          <div style="background:rgba(255,255,255,.02);border-radius:.75rem;padding:1rem;display:flex;gap:.75rem"><span style="font-weight:800;color:rgba(212,175,55,.4)">1</span><span class="text-soft">Che problema risolve?</span></div>
+          <div style="background:rgba(255,255,255,.02);border-radius:.75rem;padding:1rem;display:flex;gap:.75rem"><span style="font-weight:800;color:rgba(212,175,55,.4)">2</span><span class="text-soft">Per chi lo risolve?</span></div>
+          <div style="background:rgba(255,255,255,.02);border-radius:.75rem;padding:1rem;display:flex;gap:.75rem"><span style="font-weight:800;color:rgba(212,175,55,.4)">3</span><span class="text-soft">Quale azione vogliamo far fare alla persona dopo aver visto il contenuto?</span></div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- S2 — Scheda Progetto -->
-  <div class="card-glass accordion-item" id="s2">
-    <button class="accordion-header" onclick="toggleSection(this)">
-      <div class="accordion-icon-box">📋</div>
-      <span class="accordion-num">Sezione 02</span>
-      <span class="accordion-title">Scheda Progetto da Compilare</span>
-      <span class="accordion-arrow">▼</span>
+  <div class="card" style="margin-bottom:.75rem" id="s2">
+    <button class="accordion__header" onclick="toggleAcc(this)">
+      <div class="accordion__icon">📋</div>
+      <span class="accordion__num">02</span>
+      <span class="accordion__title">Scheda Progetto</span>
+      <span class="accordion__arrow">▼</span>
     </button>
-    <div class="accordion-body">
-      <div class="sop-content">
+    <div class="accordion__body">
+      <div class="accordion__content">
         <p>Prima di creare contenuti, compila questa scheda. Senza queste risposte, il contenuto diventa fuffa generica.</p>
-        <div class="sop-table-wrap">
-          <table class="sop-table">
-            <thead><tr><th>Campo</th><th>Domanda guida</th><th>Risposta progetto</th></tr></thead>
+        <div class="table-wrap">
+          <table class="table">
+            <thead><tr><th>Campo</th><th>Domanda guida</th><th>Risposta</th></tr></thead>
             <tbody>
-              <tr><td>Nome progetto</td><td>Come si chiama il proyecto o il cliente?</td><td>[...]</td></tr>
-              <tr><td>Target</td><td>A chi parliamo davvero?</td><td>[...]</td></tr>
-              <tr><td>Problema forte</td><td>Quale dolore o desiderio agganciamo?</td><td>[...]</td></tr>
+              <tr><td>Nome progetto</td><td>Come si chiama?</td><td>[...]</td></tr>
+              <tr><td>Target</td><td>A chi parliamo?</td><td>[...]</td></tr>
+              <tr><td>Problema forte</td><td>Quale dolore agganciamo?</td><td>[...]</td></tr>
               <tr><td>Risultato promesso</td><td>Cosa ottiene il pubblico?</td><td>[...]</td></tr>
-              <tr><td>Prova concreta</td><td>Quali dati, screenshot, demo abbiamo?</td><td>[...]</td></tr>
-              <tr><td>Tono</td><td>Professionale, diretto, provocatorio, premium?</td><td>[...]</td></tr>
-              <tr><td>Offerta</td><td>Cosa vendiamo o proponiamo?</td><td>[...]</td></tr>
-              <tr><td>CTA</td><td>Commentare, prenotare call, scaricare guida?</td><td>[...]</td></tr>
-              <tr><td>KPI</td><td>Views, lead, commenti, click, richieste?</td><td>[...]</td></tr>
+              <tr><td>Prova concreta</td><td>Quali dati abbiamo?</td><td>[...]</td></tr>
+              <tr><td>Tono</td><td>Professionale, diretto, premium?</td><td>[...]</td></tr>
+              <tr><td>Offerta</td><td>Cosa vendiamo?</td><td>[...]</td></tr>
+              <tr><td>CTA</td><td>Quale azione vuoi far fare?</td><td>[...]</td></tr>
+              <tr><td>KPI</td><td>Cosa misuri?</td><td>[...]</td></tr>
             </tbody>
           </table>
         </div>
@@ -123,16 +101,15 @@
     </div>
   </div>
 
-  <!-- S3 — Regole Editoriali -->
-  <div class="card-glass accordion-item" id="s3">
-    <button class="accordion-header" onclick="toggleSection(this)">
-      <div class="accordion-icon-box">🛡️</div>
-      <span class="accordion-num">Sezione 03</span>
-      <span class="accordion-title">Regole Editoriali Universali</span>
-      <span class="accordion-arrow">▼</span>
+  <div class="card" style="margin-bottom:.75rem" id="s3">
+    <button class="accordion__header" onclick="toggleAcc(this)">
+      <div class="accordion__icon">🛡️</div>
+      <span class="accordion__num">03</span>
+      <span class="accordion__title">Regole Editoriali Universali</span>
+      <span class="accordion__arrow">▼</span>
     </button>
-    <div class="accordion-body">
-      <div class="sop-content">
+    <div class="accordion__body">
+      <div class="accordion__content">
         <ul>
           <li>Niente numeri inventati, guadagni falsi o promesse non dimostrabili.</li>
           <li>Ogni contenuto deve avere un solo messaggio principale.</li>
@@ -141,26 +118,25 @@
           <li>Il contenuto deve insegnare, mostrare, risolvere o incuriosire.</li>
           <li>La CTA deve essere coerente con il contenuto, non appiccicata alla fine.</li>
           <li>Ogni contenuto va pensato per essere capito anche senza audio.</li>
-          <li>Se usi IA, serve controllo qualità umano e uso etico. Potenza senza controllo = disastro elegante.</li>
+          <li>Se usi IA, serve controllo qualità umano e uso etico.</li>
         </ul>
-        <div class="alert-box" style="margin-top:1rem">
-          <div class="alert-box-title">⚠️ Regola Anti-Fuffa</div>
+        <div class="alert" style="margin-top:1rem">
+          <div class="alert__title">⚠️ Regola Anti-Fuffa</div>
           <p>Se il contenuto non dice nulla di specifico, non pubblicarlo. Meglio un contenuto in meno che un contenuto generico che rovina il posizionamento.</p>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- S4 — Selezione Contenuto Madre -->
-  <div class="card-glass accordion-item" id="s4">
-    <button class="accordion-header" onclick="toggleSection(this)">
-      <div class="accordion-icon-box">✂️</div>
-      <span class="accordion-num">Sezione 04</span>
-      <span class="accordion-title">Selezione del Contenuto Madre</span>
-      <span class="accordion-arrow">▼</span>
+  <div class="card" style="margin-bottom:.75rem" id="s4">
+    <button class="accordion__header" onclick="toggleAcc(this)">
+      <div class="accordion__icon">✂️</div>
+      <span class="accordion__num">04</span>
+      <span class="accordion__title">Selezione del Contenuto Madre</span>
+      <span class="accordion__arrow">▼</span>
     </button>
-    <div class="accordion-body">
-      <div class="sop-content">
+    <div class="accordion__body">
+      <div class="accordion__content">
         <p>Il contenuto madre può essere un video lungo, una call, una demo, un documento, una pagina prodotto, una consulenza, una recensione, una lezione o una conversazione tecnica.</p>
         <h3>Processo</h3>
         <ul>
@@ -171,15 +147,15 @@
           <li>Chiudi con una CTA che chiede una risposta semplice.</li>
         </ul>
         <h3>Tipologie</h3>
-        <div class="sop-table-wrap">
-          <table class="sop-table">
-            <thead><tr><th>Tipo contenuto madre</th><th>Cosa cercare</th><th>Output migliore</th><th>Da evitare</th></tr></thead>
+        <div class="table-wrap">
+          <table class="table">
+            <thead><tr><th>Tipo</th><th>Cosa cercare</th><th>Output migliore</th><th>Da evitare</th></tr></thead>
             <tbody>
-              <tr><td>Video lungo</td><td>Momenti pratici, demo, esempi</td><td>Short tutorial</td><td>Clip fuori contesto</td></tr>
-              <tr><td>Call cliente</td><td>Obiezioni, problemi reali, soluzioni</td><td>Post educativo / reel</td><td>Dati sensibili</td></tr>
-              <tr><td>Prodotto</td><td>Beneficio visibile, trasformazione</td><td>Video dimostrativo</td><td>Spot piatto</td></tr>
-              <tr><td>Software</td><td>Prima/dopo, schermata utile, automazione</td><td>Mini demo</td><td>Schermate illeggibili</td></tr>
-              <tr><td>Evento</td><td>Momento forte, testimonianza, atmosfera</td><td>Reel emozionale</td><td>Montaggio casuale</td></tr>
+              <tr><td>Video lungo</td><td>Momenti pratici, demo</td><td>Short tutorial</td><td>Clip fuori contesto</td></tr>
+              <tr><td>Call cliente</td><td>Obiezioni, problemi reali</td><td>Post educativo</td><td>Dati sensibili</td></tr>
+              <tr><td>Prodotto</td><td>Beneficio visibile</td><td>Video dimostrativo</td><td>Spot piatto</td></tr>
+              <tr><td>Software</td><td>Prima/dopo, automazione</td><td>Mini demo</td><td>Schermate illeggibili</td></tr>
+              <tr><td>Evento</td><td>Momento forte, atmosfera</td><td>Reel emozionale</td><td>Montaggio casuale</td></tr>
             </tbody>
           </table>
         </div>
@@ -187,100 +163,79 @@
     </div>
   </div>
 
-  <!-- S5 — Creazione Short -->
-  <div class="card-glass accordion-item" id="s5">
-    <button class="accordion-header" onclick="toggleSection(this)">
-      <div class="accordion-icon-box">✍️</div>
-      <span class="accordion-num">Sezione 05</span>
-      <span class="accordion-title">Creazione dello Short / Reel / Post</span>
-      <span class="accordion-arrow">▼</span>
+  <div class="card" style="margin-bottom:.75rem" id="s5">
+    <button class="accordion__header" onclick="toggleAcc(this)">
+      <div class="accordion__icon">✍️</div>
+      <span class="accordion__num">05</span>
+      <span class="accordion__title">Creazione dello Short / Reel / Post</span>
+      <span class="accordion__arrow">▼</span>
     </button>
-    <div class="accordion-body">
-      <div class="sop-content">
+    <div class="accordion__body">
+      <div class="accordion__content">
         <h3>Struttura base</h3>
-        <div class="sop-table-wrap">
-          <table class="sop-table">
+        <div class="table-wrap">
+          <table class="table">
             <thead><tr><th>Fase</th><th>Durata</th><th>Obiettivo</th><th>Esempio</th></tr></thead>
             <tbody>
               <tr><td>Hook</td><td>0-3 sec</td><td>Fermare lo scroll</td><td>"Stai perdendo clienti per questo errore."</td></tr>
               <tr><td>Problema</td><td>3-8 sec</td><td>Far riconoscere il dolore</td><td>"La gente non capisce cosa vendi."</td></tr>
-              <tr><td>Valore</td><td>8-35 sec</td><td>Mostrare soluzione concreta</td><td>"Fai così: titolo, prova, CTA."</td></tr>
-              <tr><td>CTA</td><td>Finale</td><td>Far compiere una sola azione</td><td>"Commenta STRATEGIA e ti mando la checklist."</td></tr>
+              <tr><td>Valore</td><td>8-35 sec</td><td>Mostrare soluzione</td><td>"Fai così: titolo, prova, CTA."</td></tr>
+              <tr><td>CTA</td><td>Finale</td><td>Far compiere un'azione</td><td>"Commenta STRATEGIA e ti mando la checklist."</td></tr>
             </tbody>
           </table>
         </div>
         <h3>Regole primi 10 secondi</h3>
-        <div class="do-dont-grid">
-          <div class="do-box">
-            <div class="do-dont-label">✓ Da fare</div>
-            <ul class="do-dont-list">
-              <li>Mostra subito qualcosa di rilevante</li>
-              <li>Apri con una frase forte</li>
-              <li>Usa zoom, movimento, screenshot leggibili</li>
-              <li>Fai capire il beneficio subito</li>
-            </ul>
+        <div class="dodont">
+          <div class="dodont__box dodont__box--do">
+            <div class="dodont__label">✓ Da fare</div>
+            <ul class="dodont__list"><li>Mostra subito qualcosa di rilevante</li><li>Apri con una frase forte</li><li>Usa zoom, screenshot leggibili</li><li>Fai capire il beneficio subito</li></ul>
           </div>
-          <div class="dont-box">
-            <div class="do-dont-label">✗ Da non fare</div>
-            <ul class="do-dont-list">
-              <li>Schermate grigie o ferme</li>
-              <li>Menu irrilevanti</li>
-              <li>Introduzioni lente</li>
-              <li>Testi piccoli</li>
-              <li>Clip senza contesto</li>
-            </ul>
+          <div class="dodont__box dodont__box--dont">
+            <div class="dodont__label">✗ Da non fare</div>
+            <ul class="dodont__list"><li>Schermate grigie o ferme</li><li>Menu irrilevanti</li><li>Introduzioni lente</li><li>Testi piccoli</li><li>Clip senza contesto</li></ul>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- S6 — Titoli, Caption, CTA -->
-  <div class="card-glass accordion-item" id="s6">
-    <button class="accordion-header" onclick="toggleSection(this)">
-      <div class="accordion-icon-box">🔤</div>
-      <span class="accordion-num">Sezione 06</span>
-      <span class="accordion-title">Titoli, Caption e CTA</span>
-      <span class="accordion-arrow">▼</span>
+  <div class="card" style="margin-bottom:.75rem" id="s6">
+    <button class="accordion__header" onclick="toggleAcc(this)">
+      <div class="accordion__icon">🔤</div>
+      <span class="accordion__num">06</span>
+      <span class="accordion__title">Titoli, Caption e CTA</span>
+      <span class="accordion__arrow">▼</span>
     </button>
-    <div class="accordion-body">
-      <div class="sop-content">
+    <div class="accordion__body">
+      <div class="accordion__content">
         <h3>Titoli</h3>
         <ul>
-          <li>Devono essere orientati al beneficio: "Come ottenere X", "Il metodo per evitare Y".</li>
+          <li>Orientati al beneficio: "Come ottenere X", "Il metodo per evitare Y".</li>
           <li>Niente tutto maiuscolo. Sembra disperazione digitale.</li>
           <li>Titolo specifico batte titolo generico.</li>
-          <li>Evita titoli da ChatGPT pigro: "Scopri il segreto definitivo".</li>
-          <li>Usa Title Case quando serve ordine visivo.</li>
+          <li>Evita: "Scopri il segreto definitivo". Troppo vago.</li>
+          <li>Usa Title Case per ordine visivo.</li>
         </ul>
-        <div class="sop-table-wrap">
-          <table class="sop-table">
+        <div class="table-wrap">
+          <table class="table">
             <thead><tr><th>Debole</th><th>Migliore</th><th>Perché funziona</th></tr></thead>
             <tbody>
-              <tr><td>Scopri il nostro servizio</td><td>Come Ridurre Errori Operativi In 10 Minuti</td><td>Promette un risultato concreto</td></tr>
-              <tr><td>Nuova automazione AI</td><td>Questo Flusso Ti Evita 3 Ore Di Lavoro</td><td>Mostra beneficio e tempo</td></tr>
-              <tr><td>Perché scegliere noi</td><td>Il Controllo Che Manca Alla Tua Azienda</td><td>Aggancia un problema reale</td></tr>
-              <tr><td>Bellissimo vestito</td><td>Il Look Che Cambia Una Serata Intera</td><td>Trasforma prodotto in desiderio</td></tr>
+              <tr><td>Scopri il nostro servizio</td><td>Come Ridurre Errori In 10 Minuti</td><td>Risultato concreto</td></tr>
+              <tr><td>Nuova automazione AI</td><td>Questo Flusso Ti Evita 3 Ore Di Lavoro</td><td>Beneficio + tempo</td></tr>
+              <tr><td>Perché scegliere noi</td><td>Il Controllo Che Manca Alla Tua Azienda</td><td>Problema reale</td></tr>
             </tbody>
           </table>
         </div>
-        <h3>Caption</h3>
-        <ul>
-          <li>Breve. Deve essere letta tutta.</li>
-          <li>Riprende il tema del video, non lo riscrive da capo.</li>
-          <li>Usa massimo una CTA principale.</li>
-          <li>Hashtag specifici, non generici. Niente #fyp, #viral a caso.</li>
-        </ul>
-        <h3>CTA universali adattabili</h3>
-        <div class="sop-table-wrap">
-          <table class="sop-table">
-            <thead><tr><th>Obiettivo</th><th>CTA consigliata</th><th>Quando usarla</th></tr></thead>
+        <h3>CTA universali</h3>
+        <div class="table-wrap">
+          <table class="table">
+            <thead><tr><th>Obiettivo</th><th>CTA consigliata</th></tr></thead>
             <tbody>
-              <tr><td>Lead consulenza</td><td>Commenta STRATEGIA e ti mando i prossimi passi.</td><td>Servizi professionali</td></tr>
-              <tr><td>Vendita prodotto</td><td>Scrivi MODELLO e ti mando dettagli e taglie.</td><td>E-commerce, fashion</td></tr>
-              <tr><td>Recruiting</td><td>Commenta RETE e ti spiego come candidarti.</td><td>Rete vendita</td></tr>
-              <tr><td>Community</td><td>Commenta ACCESSO e ti mando il link.</td><td>Gruppi, newsletter</td></tr>
-              <tr><td>Demo software</td><td>Commenta DEMO e ti mostro il flusso completo.</td><td>SaaS, automazioni</td></tr>
+              <tr><td>Lead consulenza</td><td>Commenta STRATEGIA e ti mando i prossimi passi.</td></tr>
+              <tr><td>Vendita prodotto</td><td>Scrivi MODELLO e ti mando dettagli e taglie.</td></tr>
+              <tr><td>Recruiting</td><td>Commenta RETE e ti spiego come candidarti.</td></tr>
+              <tr><td>Community</td><td>Commenta ACCESSO e ti mando il link.</td></tr>
+              <tr><td>Demo software</td><td>Commenta DEMO e ti mostro il flusso completo.</td></tr>
             </tbody>
           </table>
         </div>
@@ -288,16 +243,15 @@
     </div>
   </div>
 
-  <!-- S7 — Regole Visuali -->
-  <div class="card-glass accordion-item" id="s7">
-    <button class="accordion-header" onclick="toggleSection(this)">
-      <div class="accordion-icon-box">👁️</div>
-      <span class="accordion-num">Sezione 07</span>
-      <span class="accordion-title">Regole Visuali e Qualità Video</span>
-      <span class="accordion-arrow">▼</span>
+  <div class="card" style="margin-bottom:.75rem" id="s7">
+    <button class="accordion__header" onclick="toggleAcc(this)">
+      <div class="accordion__icon">👁️</div>
+      <span class="accordion__num">07</span>
+      <span class="accordion__title">Regole Visuali e Qualità Video</span>
+      <span class="accordion__arrow">▼</span>
     </button>
-    <div class="accordion-body">
-      <div class="sop-content">
+    <div class="accordion__body">
+      <div class="accordion__content">
         <ul>
           <li>Formato verticale: 9:16. Niente landscape riciclato male.</li>
           <li>Testi grandi e centrali. Non metterli troppo in basso.</li>
@@ -306,31 +260,30 @@
           <li>Niente musica se non migliora davvero la comprensione.</li>
           <li>Non tagliare il contenuto a metà. Ogni short deve chiudere un'idea.</li>
           <li>Inserire il volto quando aumenta fiducia e attenzione.</li>
-          <li>La miniatura deve essere pensata nel primo secondo: frame interessante, non casuale.</li>
+          <li>La miniatura deve essere pensata nel primo secondo.</li>
         </ul>
       </div>
     </div>
   </div>
 
-  <!-- S8 — Multi-Canale -->
-  <div class="card-glass accordion-item" id="s8">
-    <button class="accordion-header" onclick="toggleSection(this)">
-      <div class="accordion-icon-box">📡</div>
-      <span class="accordion-num">Sezione 08</span>
-      <span class="accordion-title">Pubblicazione Multi-Canale</span>
-      <span class="accordion-arrow">▼</span>
+  <div class="card" style="margin-bottom:.75rem" id="s8">
+    <button class="accordion__header" onclick="toggleAcc(this)">
+      <div class="accordion__icon">📡</div>
+      <span class="accordion__num">08</span>
+      <span class="accordion__title">Pubblicazione Multi-Canale</span>
+      <span class="accordion__arrow">▼</span>
     </button>
-    <div class="accordion-body">
-      <div class="sop-content">
-        <div class="sop-table-wrap">
-          <table class="sop-table">
-            <thead><tr><th>Canale</th><th>Formato</th><th>Caption</th><th>Nota operativa</th></tr></thead>
+    <div class="accordion__body">
+      <div class="accordion__content">
+        <div class="table-wrap">
+          <table class="table">
+            <thead><tr><th>Canale</th><th>Formato</th><th>Nota</th></tr></thead>
             <tbody>
-              <tr><td>YouTube Shorts</td><td>Video verticale, max 59 sec</td><td>Titolo forte + descrizione breve</td><td>Collegare al contenuto lungo</td></tr>
-              <tr><td>Instagram Reels</td><td>Video verticale</td><td>Titolo + hashtag specifici</td><td>Visual più curato</td></tr>
-              <tr><td>TikTok</td><td>Video verticale</td><td>Caption breve + hashtag mirati</td><td>Hook aggressivo nei primi sec</td></tr>
-              <tr><td>LinkedIn</td><td>Video o post breve</td><td>Tono professionale</td><td>Dati, lezioni, casi studio</td></tr>
-              <tr><td>X</td><td>Post breve/thread</td><td>Curiosità + promessa concreta</td><td>Buono per testare hook</td></tr>
+              <tr><td>YouTube Shorts</td><td>Max 59 sec</td><td>Collegare al contenuto lungo</td></tr>
+              <tr><td>Instagram Reels</td><td>Video verticale</td><td>Visual curato, hashtag specifici</td></tr>
+              <tr><td>TikTok</td><td>Caption breve</td><td>Hook aggressivo nei primi sec</td></tr>
+              <tr><td>LinkedIn</td><td>Tono professionale</td><td>Dati, lezioni, casi studio</td></tr>
+              <tr><td>X</td><td>Post breve/thread</td><td>Buono per testare hook</td></tr>
             </tbody>
           </table>
         </div>
@@ -338,25 +291,24 @@
     </div>
   </div>
 
-  <!-- S9 — Report -->
-  <div class="card-glass accordion-item" id="s9">
-    <button class="accordion-header" onclick="toggleSection(this)">
-      <div class="accordion-icon-box">📊</div>
-      <span class="accordion-num">Sezione 09</span>
-      <span class="accordion-title">Report Giornaliero</span>
-      <span class="accordion-arrow">▼</span>
+  <div class="card" style="margin-bottom:.75rem" id="s9">
+    <button class="accordion__header" onclick="toggleAcc(this)">
+      <div class="accordion__icon">📊</div>
+      <span class="accordion__num">09</span>
+      <span class="accordion__title">Report Giornaliero</span>
+      <span class="accordion__arrow">▼</span>
     </button>
-    <div class="accordion-body">
-      <div class="sop-content">
-        <div class="alert-box">
-          <div class="alert-box-title">⚠️ Obbligo operativo</div>
+    <div class="accordion__body">
+      <div class="accordion__content">
+        <div class="alert">
+          <div class="alert__title">⚠️ Obbligo operativo</div>
           <p>Ogni giorno va inviato un aggiornamento. Non in file separati. Non "poi lo faccio". Messaggio diretto, sintetico, con numeri e link.</p>
         </div>
-        <div class="sop-table-wrap">
-          <table class="sop-table">
-            <thead><tr><th>Campo</th><th>Contenuto da inviare</th></tr></thead>
+        <div class="table-wrap">
+          <table class="table">
+            <thead><tr><th>Campo</th><th>Contenuto</th></tr></thead>
             <tbody>
-              <tr><td>Contenuti creati</td><td>[Numero] contenuti creati oggi</td></tr>
+              <tr><td>Contenuti creati</td><td>[numero] contenuti creati oggi</td></tr>
               <tr><td>Link pubblicati</td><td>[Link 1] - [Link 2] - [Link 3]</td></tr>
               <tr><td>Views per contenuto</td><td>[Video 1: X views] [Video 2: Y views]</td></tr>
               <tr><td>Cosa ha funzionato</td><td>[Hook / tema / formato / canale]</td></tr>
@@ -369,135 +321,86 @@
     </div>
   </div>
 
-  <!-- S10 — Checklist -->
-  <div class="card-glass accordion-item" id="s10">
-    <button class="accordion-header" onclick="toggleSection(this)">
-      <div class="accordion-icon-box">☑️</div>
-      <span class="accordion-num">Sezione 10</span>
-      <span class="accordion-title">Checklist Operative</span>
-      <span class="accordion-arrow">▼</span>
+  <div class="card" style="margin-bottom:.75rem" id="s10">
+    <button class="accordion__header" onclick="toggleAcc(this)">
+      <div class="accordion__icon">☑️</div>
+      <span class="accordion__num">10</span>
+      <span class="accordion__title">Checklist Operative</span>
+      <span class="accordion__arrow">▼</span>
     </button>
-    <div class="accordion-body">
-      <div class="sop-content">
-        <div class="do-dont-grid">
-          <div class="do-box">
-            <div class="do-dont-label" style="color:#f59e0b">Prima di pubblicare</div>
-            <ul class="do-dont-list">
-              <li>Hook nei primi 3 secondi</li>
-              <li>Beneficio chiaro</li>
-              <li>Video verticale</li>
-              <li>Testi leggibili</li>
-              <li>Audio comprensibile</li>
-              <li>Niente promesse false</li>
-              <li>CTA coerente</li>
-              <li>Titolo specifico</li>
-              <li>Hashtag mirati</li>
-              <li>Qualità HD</li>
-            </ul>
+    <div class="accordion__body">
+      <div class="accordion__content">
+        <div class="dodont">
+          <div class="dodont__box dodont__box--do">
+            <div class="dodont__label">Prima di pubblicare</div>
+            <ul class="dodont__list"><li>Hook nei primi 3 secondi</li><li>Beneficio chiaro</li><li>Video verticale</li><li>Testi leggibili</li><li>Audio comprensibile</li><li>Niente promesse false</li><li>CTA coerente</li><li>Titolo specifico</li><li>Hashtag mirati</li><li>Qualità HD</li></ul>
           </div>
-          <div class="dont-box">
-            <div class="do-dont-label" style="color:#60a5fa">Dopo la pubblicazione</div>
-            <ul class="do-dont-list" style="color:rgba(255,255,255,.5)">
-              <li style="list-style:none">☐ Link salvato</li>
-              <li style="list-style:none">☐ Views annotate</li>
-              <li style="list-style:none">☐ Commenti controllati</li>
-              <li style="list-style:none">☐ Risposte inviate</li>
-              <li style="list-style:none">☐ Insight scritto</li>
-              <li style="list-style:none">☐ Prossimo contenuto scelto</li>
-              <li style="list-style:none">☐ Report giornaliero mandato</li>
-            </ul>
+          <div class="dodont__box dodont__box--dont">
+            <div class="dodont__label">Dopo la pubblicazione</div>
+            <ul class="dodont__list"><li>☐ Link salvato</li><li>☐ Views annotate</li><li>☐ Commenti controllati</li><li>☐ Risposte inviate</li><li>☐ Insight scritto</li><li>☐ Prossimo contenuto scelto</li><li>☐ Report giornaliero mandato</li></ul>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- S11 — Prompt -->
-  <div class="card-glass accordion-item" id="s11">
-    <button class="accordion-header" onclick="toggleSection(this)">
-      <div class="accordion-icon-box">💻</div>
-      <span class="accordion-num">Sezione 11</span>
-      <span class="accordion-title">Prompt Riutilizzabili</span>
-      <span class="accordion-arrow">▼</span>
+  <div class="card" style="margin-bottom:.75rem" id="s11">
+    <button class="accordion__header" onclick="toggleAcc(this)">
+      <div class="accordion__icon">💻</div>
+      <span class="accordion__num">11</span>
+      <span class="accordion__title">Prompt Riutilizzabili</span>
+      <span class="accordion__arrow">▼</span>
     </button>
-    <div class="accordion-body">
-      <div class="sop-content">
+    <div class="accordion__body">
+      <div class="accordion__content">
         <div class="prompt-block">
-          <div class="prompt-block-header">
-            <span class="prompt-block-title">Prompt madre per adattare la SOP a un progetto</span>
-            <button class="copy-btn" onclick="copyPrompt(this)">Copia</button>
-          </          div>
+          <div class="prompt-block__header"><span class="prompt-block__title">Prompt madre</span><button class="copy-btn" onclick="copyPrompt(this)">Copia</button></div>
           <pre>Agisci come strategist, editor e project manager dei contenuti brevi.
 Prendi il progetto seguente: [NOME PROGETTO].
-Target: [TARGET].
-Offerta: [OFFERTA].
-Obiettivo: [OBIETTIVO].
-Tono: [TONO].
+Target: [TARGET]. Offerta: [OFFERTA]. Obiettivo: [OBIETTIVO]. Tono: [TONO].
 Materiali disponibili: [VIDEO / FOTO / DOCUMENTI / DEMO / CALL / PAGINE].
 
 Crea una mini SOP operativa per produrre contenuti brevi.
-Includi:
-1. 10 idee di contenuti
-2. 10 hook forti
-3. 10 titoli benefit-driven
-4. 5 CTA coerenti
-5. struttura video da 30-45 secondi
-6. checklist qualità
-7. report giornaliero
+Includi: 10 idee di contenuti, 10 hook forti, 10 titoli benefit-driven,
+5 CTA coerenti, struttura video da 30-45 secondi, checklist qualità, report giornaliero.
 Regola: niente promesse false, niente numeri inventati, contenuti specifici e utili.</pre>
         </div>
         <div class="prompt-block">
-          <div class="prompt-block-header">
-            <span class="prompt-block-title">Prompt per titoli più forti</span>
-            <button class="copy-btn" onclick="copyPrompt(this)">Copia</button>
-          </div>
-          <pre>Dammi 20 titoli forti, specifici e orientati al beneficio per questo contenuto: [DESCRIZIONE].
-Devono incuriosire senza mentire.
-Niente full caps.
-Niente frasi generiche.
-Massimo 45 caratteri quando possibile.
-Dividili in: provocatori, educativi, tutorial, premium.</pre>
+          <div class="prompt-block__header"><span class="prompt-block__title">Prompt per titoli</span><button class="copy-btn" onclick="copyPrompt(this)">Copia</button></div>
+          <pre>Dammi 20 titoli forti, specifici e orientati al beneficio per: [DESCRIZIONE].
+Devono incuriosire senza mentire. Niente full caps. Niente frasi generiche.
+Massimo 45 caratteri. Dividili in: provocatori, educativi, tutorial, premium.</pre>
         </div>
         <div class="prompt-block">
-          <div class="prompt-block-header">
-            <span class="prompt-block-title">Prompt per trasformare un video lungo in short</span>
-            <button class="copy-btn" onclick="copyPrompt(this)">Copia</button>
-          </div>
+          <div class="prompt-block__header"><span class="prompt-block__title">Prompt per video lungo → short</span><button class="copy-btn" onclick="copyPrompt(this)">Copia</button></div>
           <pre>Analizza questo contenuto lungo: [TRASCRIZIONE / LINK / RIASSUNTO].
-Trova 5 clip potenziali per short.
-Per ogni clip dammi:
-- punto iniziale e finale
-- hook
-- titolo
-- struttura
-- CTA
-- perché potrebbe funzionare
+Trova 5 clip potenziali per short. Per ogni clip dammi:
+punto iniziale e finale, hook, titolo, struttura, CTA, perché potrebbe funzionare.
 Scarta le parti lente, generiche o non comprensibili senza contesto.</pre>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- S12 — Esempi -->
-  <div class="card-glass accordion-item" id="s12">
-    <button class="accordion-header" onclick="toggleSection(this)">
-      <div class="accordion-icon-box">📚</div>
-      <span class="accordion-num">Sezione 12</span>
-      <span class="accordion-title">Esempi di Adattamento per Progetto</span>
-      <span class="accordion-arrow">▼</span>
+  <div class="card" style="margin-bottom:.75rem" id="s12">
+    <button class="accordion__header" onclick="toggleAcc(this)">
+      <div class="accordion__icon">📚</div>
+      <span class="accordion__num">12</span>
+      <span class="accordion__title">Esempi di Adattamento per Progetto</span>
+      <span class="accordion__arrow">▼</span>
     </button>
-    <div class="accordion-body">
-      <div class="sop-content">
-        <div class="sop-table-wrap">
-          <table class="sop-table">
+    <div class="accordion__body">
+      <div class="accordion__content">
+        <div class="table-wrap">
+          <table class="table">
             <thead><tr><th>Progetto</th><th>Angolo</th><th>Hook</th><th>CTA</th><th>KPI</th></tr></thead>
             <tbody>
-              <tr><td>Assicurazioni</td><td>Errore costoso</td><td>Questa garanzia manca quasi sempre.</td><td>Commenta CHECK</td><td>Richieste preventivo</td></tr>
-              <tr><td>Agentic OS / Hermes</td><td>Automazione</td><td>Questo flusso fa da solo 3 passaggi.</td><td>Commenta DEMO</td><td>Demo prenotate</td></tr>
-              <tr><td>Mamasita Boutique</td><td>Look reale</td><td>Questo outfit cambia tutta la serata.</td><td>Scrivi LOOK</td><td>DM e vendite</td></tr>
-              <tr><td>MiniPlantir</td><td>Controllo cassa</td><td>La tua azienda perde soldi qui.</td><td>Commenta CONTROLLO</td><td>Call strategiche</td></tr>
-              <tr><td>EAR LAB / associazione</td><td>Evento locale</td><td>Questa cosa manca alla città.</td><td>Commenta PARTECIPO</td><td>Partecipanti</td></tr>
-              <tr><td>Immobiliare</td><td>Errore gestione</td><td>Aspettare troppo ti costa migliaia.</td><td>Commenta IMMOBILE</td><td>Contatti qualificati</td></tr>
+              <tr><td>Assicurazioni</td><td>Errore costoso</td><td>Questa garanzia manca quasi sempre.</td><td>Commenta CHECK</td><td>Richieste</td></tr>
+              <tr><td>Agentic OS</td><td>Automazione</td><td>Questo flusso fa da solo 3 passaggi.</td><td>Commenta DEMO</td><td>Demo</td></tr>
+              <tr><td>E-commerce</td><td>Look reale</td><td>Questo outfit cambia tutta la serata.</td><td>Scrivi LOOK</td><td>Vendite</td></tr>
+              <tr><td>Software</td><td>Controllo</td><td>La tua azienda perde soldi qui.</td><td>Commenta CONTROLLO</td><td>Call</td></tr>
+              <tr><td>Associazione</td><td>Evento locale</td><td>Questa cosa manca alla città.</td><td>Commenta PARTECIPO</td><td>Partecipanti</td></tr>
+              <tr><td>Immobiliare</td><td>Errore gestione</td><td>Aspettare troppo ti costa migliaia.</td><td>Commenta IMMOBILE</td><td>Contatti</td></tr>
             </tbody>
           </table>
         </div>
@@ -505,41 +408,24 @@ Scarta le parti lente, generiche o non comprensibili senza contesto.</pre>
     </div>
   </div>
 
-  <!-- S13 — FAQ -->
-  <div class="card-glass accordion-item" id="s13">
-    <button class="accordion-header" onclick="toggleSection(this)">
-      <div class="accordion-icon-box">❓</div>
-      <span class="accordion-num">Sezione 13</span>
-      <span class="accordion-title">FAQ e Regole Dure</span>
-      <span class="accordion-arrow">▼</span>
+  <div class="card" id="s13">
+    <button class="accordion__header" onclick="toggleAcc(this)">
+      <div class="accordion__icon">❓</div>
+      <span class="accordion__num">13</span>
+      <span class="accordion__title">FAQ e Regole Dure</span>
+      <span class="accordion__arrow">▼</span>
     </button>
-    <div class="accordion-body">
-      <div class="sop-content">
-        <div class="faq-item">
-          <div class="faq-q">❓ Quanti contenuti devo pubblicare?</div>
-          <div class="faq-a">Dipende dal progetto. Se vuoi spingere forte: 3 al giorno. Se vuoi qualità sostenibile: 5 a settimana.</div>
+    <div class="accordion__body">
+      <div class="accordion__content">
+        <div class="faq-list">
+          <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Quanti contenuti devo pubblicare?<span class="faq-arrow">▼</span></button><div class="faq-a">Dipende dal progetto. Se vuoi spingere forte: 3 al giorno. Se vuoi qualità sostenibile: 5 a settimana.</div></div>
+          <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Posso usare lo stesso contenuto su più piattaforme?<span class="faq-arrow">▼</span></button><div class="faq-a">Sì, ma adatta titolo, caption, hashtag e tono. Copiare e incollare ovunque è pigro.</div></div>
+          <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Posso usare IA?<span class="faq-arrow">▼</span></button><div class="faq-a">Sì, ma l'IA deve accelerare, non sostituire il giudizio. Controllo qualità obbligatorio.</div></div>
+          <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Cosa faccio se il contenuto non performa?<span class="faq-arrow">▼</span></button><div class="faq-a">Guarda hook, chiarezza, titolo, visual e CTA. Poi rifai una versione migliore.</div></div>
+          <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Quando scarto una clip?<span class="faq-arrow">▼</span></button><div class="faq-a">Quando non si capisce, è lenta, non dà valore o sembra pubblicità mascherata.</div></div>
+          <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Qual è la regola più importante?<span class="faq-arrow">▼</span></button><div class="faq-a"><strong>Specificità.</strong> Il pubblico perdona un video semplice, non un contenuto vuoto.</div></div>
         </div>
-        <div class="faq-item">
-          <div class="faq-q">❓ Posso usare lo stesso contenuto su più piattaforme?</div>
-          <div class="faq-a">Sì, ma adatta titolo, caption, hashtag e tono. Copiare e incollare ovunque è pigro.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q">❓ Posso usare IA?</div>
-          <div class="faq-a">Sì, ma l'IA deve accelerare, non sostituire il giudizio. Controllo qualità obbligatorio.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q">❓ Cosa faccio se il contenuto non performa?</div>
-          <div class="faq-a">Guarda hook, chiarezza, titolo, visual e CTA. Poi rifai una versione migliore.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q">❓ Quando scarto una clip?</div>
-          <div class="faq-a">Quando non si capisce, è lenta, non dà valore o sembra pubblicità mascherata.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q">❓ Qual è la regola più importante?</div>
-          <div class="faq-a"><strong>Specificità.</strong> Il pubblico perdona un video semplice, non un contenuto vuoto.</div>
-        </div>
-        <div class="closing-box">
+        <div class="closing">
           <h3>⭐ Chiusura schietta</h3>
           <p>Un progetto non cresce perché "pubblichiamo qualcosa". Cresce quando ogni contenuto ha una funzione: attenzione, fiducia, prova, conversione. Il resto è rumore.</p>
         </div>
@@ -547,46 +433,32 @@ Scarta le parti lente, generiche o non comprensibili senza contesto.</pre>
     </div>
   </div>
 
-</div><!-- /accordion container -->
+</div>
 
-<!-- Footer -->
 <footer class="footer">
-  <div class="footer-inner">
-    <div class="footer-copy">
-      <strong>AI Classroom — ArchimedeHub</strong>
-      Sistema operativo per contenuti brevi
-    </div>
-    <div style="display:flex;gap:1.5rem;font-size:.75rem;color:rgba(255,255,255,.4)">
-      <span>© 2026 DI RIENZO SRL</span>
-      <span>•</span>
-      <span>P.IVA IT — Tutti i diritti riservati</span>
-    </div>
+  <div class="footer__inner">
+    <div class="footer__copy"><strong>AI Classroom — ArchimedeHub</strong>Sistema operativo per contenuti brevi</div>
+    <div class="footer__links"><span>© 2026 DI RIENZO SRL</span><span>•</span><span>P.IVA IT</span></div>
   </div>
 </footer>
 
 <script>
-document.getElementById('mobileBtn').addEventListener('click', function() {
-  document.getElementById('mobileNav').classList.toggle('open');
-});
-
-function toggleSection(btn) {
-  var body = btn.nextElementSibling;
-  var arrow = btn.querySelector('.accordion-arrow');
-  var isOpen = body.classList.contains('open');
-  body.classList.toggle('open');
-  arrow.classList.toggle('open');
-  arrow.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+document.getElementById('mobileBtn').addEventListener('click', function(){document.getElementById('mobileNav').classList.toggle('open')});
+function toggleAcc(btn){
+  var body=btn.nextElementSibling, arrow=btn.querySelector('.accordion__arrow'), isOpen=body.classList.contains('open');
+  body.classList.toggle('open'); arrow.classList.toggle('open');
+  arrow.style.transform=isOpen?'rotate(0deg)':'rotate(180deg)';
 }
-
-function copyPrompt(btn) {
-  var text = btn.parentElement.nextElementSibling.textContent;
-  navigator.clipboard.writeText(text).then(function() {
-    btn.textContent = 'Copiato!';
-    btn.classList.add('copied');
-    setTimeout(function() {
-      btn.textContent = 'Copia';
-      btn.classList.remove('copied');
-    }, 2000);
+function toggleFaq(btn){
+  var arrow=btn.querySelector('.faq-arrow'), body=btn.nextElementSibling, isOpen=body.classList.contains('open');
+  body.classList.toggle('open'); arrow.classList.toggle('open');
+  arrow.style.transform=isOpen?'rotate(0deg)':'rotate(180deg)';
+}
+function copyPrompt(btn){
+  var text=btn.parentElement.nextElementSibling.textContent;
+  navigator.clipboard.writeText(text).then(function(){
+    btn.textContent='Copiato!'; btn.classList.add('copied');
+    setTimeout(function(){btn.textContent='Copia';btn.classList.remove('copied')},2000);
   });
 }
 </script>
